@@ -1,0 +1,129 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
+#tudo {
+  height: 766px;
+  width: 375px;
+margin-left: 40%;
+  margin-top: 8%;
+}
+
+header {
+  background-color: #1b83e2;
+  display: block;
+  height: 66px;
+}
+
+h1 {
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 18px;
+  color: #f4f4f4;
+  text-align: center;
+  padding-top: 24px;
+}
+
+#main {
+  background-color: #f4f4f4;
+}
+
+.TextSelect {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+  color: #777777;
+  padding-top: 23px;
+}
+
+select {
+  width: 327px;
+  height: 48px;
+  background: #ffffff;
+  border: 1px solid #bbbbbb;
+  border-radius: 4px;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 18px;
+  align-items: center;
+  color: #555555;
+  cursor: pointer;
+  
+}
+
+#escolhasDeConversão {
+  margin-left: 24px;
+}
+
+input {
+  width: 327px;
+  height: 48px;
+  background: #ffffff;
+  border: 1px solid #bbbbbb;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 18px;
+  color: #555555;
+  text-align: center;
+}
+
+button {
+  width: 327px;
+  height: 48px;
+  left: 24px;
+  top: 374px;
+  background: #1b83e2;
+  border: 1px;
+  border-radius: 25px;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 18px;
+  color: #f4f4f4;
+  margin: 24px 24px 0px 24px;
+  cursor: pointer;
+}
+
+#boxComBorder {
+  width: 327px;
+  height: 276px;
+  border: 1px solid #1b83e2;
+  border-radius: 4px;
+  margin: 36px 24px;
+}
+
+#ImagensValores {
+  text-align: center;
+  margin-top: 12px;
+}
+
+#seta {
+    padding-top: 15px;
+    padding-bottom: 13.19px;
+  display: block;
+  margin-left: 144px;
+}
+
+.StyleText {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 18px;
+  color: #1b83e2;
+}
+
+.Text {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+  color: #777777;
+}

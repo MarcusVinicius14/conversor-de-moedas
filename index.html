@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>desafio</title>
+    <link href="./styles.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <div id="tudo">
+        <header>
+            <h1>CodeClub Convert Money</h1>
+        </header>
+        <main id="main">
+            <div id="escolhasDeConversão">
+                <div id="primeiroSelect">
+                    <p class="TextSelect">Converter de</p>
+                    <select id="select1" class="select">
+                        <option>R$ Real brasileiro</option>
+                        <option>US$ Dólar americano</option>
+                        <option>€ Euro</option>
+                        <option>Bitcoin</option>
+                    </select>
+                </div>
+
+                <div id="segundoSelect">
+                    <p class="TextSelect">Converter de</p>
+                    <select id="select2" class="select">
+                        <option>R$ Real brasileiro</option>
+                        <option>US$ Dólar americano</option>
+                        <option>€ Euro</option>
+                        <option>Bitcoin</option>
+                    </select>
+                </div>
+
+                <div>
+                    <p class="TextSelect">Valor</p>
+                    <input placeholder="R$ 10.000,00" class="select" id="valorParaConverter" type="number">
+                </div>
+            </div>
+
+            <button id="button">Converter</button>
+
+            <div id="boxComBorder">
+                <div id="ImagensValores">
+                    <img id="PrimeiraImagem" src="./assets/brasil.png">
+                    <P class="Text" id="primeiraMoeda">Real</P>
+                    <P class="StyleText" id="primeiraValor">R$ 0,00</P>
+                    <img id="seta" src="./assets/seta.png">
+                    <img id="SegundaImagem" src="./assets/dolar.png">
+                    <P class="Text" id="SegundaMoeda">Dólar Americano</P>
+                    <P class="StyleText" id="SegundoValor">US$ 0,00</P>
+
+                </div>
+            </div>
+        </main>
+    </div>
+  </body>
+  <script src="./scripts.js"></script>
+</html>
