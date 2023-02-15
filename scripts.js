@@ -1,15 +1,19 @@
 const button = document.getElementById("button")
-const dolar = 5.32
-const euro = 5.54
-const bitCoin = 88003.77
 
-function ProgramClick() {
+async function ProgramClick() {// async await
     const input = document.getElementById("valorParaConverter").value
     const primeiroValor = document.getElementById("primeiraValor")
     const SegundoValor = document.getElementById("SegundoValor")
     const select1 = document.getElementById("select1").value
     const select2 = document.getElementById("select2").value
 
+    const data = await fetch("https://economia.awesomeapi.com.br/last/USD-BRL,EUR-BRL,BTC-BRL").then(response => {
+      return response.json()
+      })
+console.log(data)
+    const dolar = data.USDBRL.high
+    const euro = data.EURBRL.high
+    const bitCoin = data.BTCBRL.high
 
 if (select1 === "R$ Real brasileiro" && select2 === "US$ Dólar americano") {
     primeiroValor.innerHTML = new Intl.NumberFormat('pt-br',
@@ -34,7 +38,7 @@ if (select1 === "R$ Real brasileiro" && select2 === "US$ Dólar americano") {
     { style: 'currency', currency: 'BRL' }
   ).format(input); 
 
-  SegundoValor.innerHTML = (input / bitCoin).toFixed(4)
+  SegundoValor.innerHTML = (input / bitCoin).toFixed(2)
 } else if(select1 === "US$ Dólar americano" && select2 === "R$ Real brasileiro"){
     primeiroValor.innerHTML = new Intl.NumberFormat('en-US',
     { style: 'currency', currency: 'USD' }
@@ -52,13 +56,13 @@ if (select1 === "R$ Real brasileiro" && select2 === "US$ Dólar americano") {
   SegundoValor.innerHTML = new Intl.NumberFormat("de-DE", {
     style: "currency",
     currency: "EUR",
-  }).format(input * 0.96)
+  }).format(input * (dolar/euro))
 } else if(select1 === "US$ Dólar americano" && select2 === "Bitcoin"){
     primeiroValor.innerHTML = new Intl.NumberFormat('en-US',
     { style: 'currency', currency: 'USD' }
   ).format(input); 
 
-  SegundoValor.innerHTML = (input * 0.000061)
+  SegundoValor.innerHTML = (input * (dolar/bitCoin)).toFixed(2)
 } else if(select1 === "€ Euro" && select2 === "R$ Real brasileiro"){
     primeiroValor.innerHTML = new Intl.NumberFormat('de-DE',
     { style: 'currency', currency: 'EUR' }
@@ -67,7 +71,7 @@ if (select1 === "R$ Real brasileiro" && select2 === "US$ Dólar americano") {
   SegundoValor.innerHTML = new Intl.NumberFormat("pt-BR", {
     style: "currency",
     currency: "BRL",
-  }).format(input * 5.63)
+  }).format( input * euro )
 } else if(select1 === "€ Euro" && select2 === "US$ Dólar americano"){
     primeiroValor.innerHTML = new Intl.NumberFormat('de-DE',
     { style: 'currency', currency: 'EUR' }
@@ -76,34 +80,33 @@ if (select1 === "R$ Real brasileiro" && select2 === "US$ Dólar americano") {
   SegundoValor.innerHTML = new Intl.NumberFormat("en-US", {
     style: "currency",
     currency: "USD",
-  }).format(input * 1.04)
+  }).format(input * (euro/dolar))
 } else if(select1 === "€ Euro" && select2 === "Bitcoin"){
     primeiroValor.innerHTML = new Intl.NumberFormat('de-DE',
     { style: 'currency', currency: 'EUR' }
   ).format(input); 
 
-  SegundoValor.innerHTML = (input * 0.000063)
+  SegundoValor.innerHTML = (input * (euro/bitCoin)).toFixed(2)
 }else if(select1 === "Bitcoin" && select2 === "R$ Real brasileiro"){
     primeiroValor.innerHTML = (input); 
-
   SegundoValor.innerHTML = new Intl.NumberFormat("pt-BR", {
     style: "currency",
     currency: "BRL",
-  }).format(input * 89609.65)
+  }).format(input * bitCoin)
 } else if(select1 === "Bitcoin" && select2 === "US$ Dólar americano"){
     primeiroValor.innerHTML = (input); 
 
     SegundoValor.innerHTML = new Intl.NumberFormat("en-US", {
       style: "currency",
       currency: "USD",
-    }).format(input * 16537.30)
+    }).format(input * (bitCoin/dolar))
 }else if(select1 === "Bitcoin" && select2 === "€ Euro"){
     primeiroValor.innerHTML = (input); 
 
     SegundoValor.innerHTML = new Intl.NumberFormat("de-DE", {
       style: "currency",
       currency: "EUR",
-    }).format(input * 15879.12)
+    }).format(input * (bitCoin/euro))
 }
 }
 
