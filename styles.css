@@ -5,17 +5,24 @@
   font-family: "Roboto", sans-serif;
 }
 
+body{
+  display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
 #tudo {
   height: 766px;
   width: 375px;
-margin-left: 40%;
-  margin-top: 8%;
 }
 
 header {
   background-color: #1b83e2;
-  display: block;
+  display: flex;
   height: 66px;
+  align-items: center;
+  justify-content: center;
 }
 
 h1 {
@@ -23,8 +30,6 @@ h1 {
   font-size: 24px;
   line-height: 18px;
   color: #f4f4f4;
-  text-align: center;
-  padding-top: 24px;
 }
 
 #main {
@@ -96,18 +101,14 @@ button {
   border: 1px solid #1b83e2;
   border-radius: 4px;
   margin: 36px 24px;
+  padding: 5px;
 }
 
 #ImagensValores {
-  text-align: center;
-  margin-top: 12px;
-}
-
-#seta {
-    padding-top: 15px;
-    padding-bottom: 13.19px;
-  display: block;
-  margin-left: 144px;
+display: flex;
+flex-direction: column;
+align-items: center;
+gap: 8px;
 }
 
 .StyleText {
